@@ -36,20 +36,13 @@ class Car {
 
 /*===============================SIMULACIÓN DE BASE DE DATOS=======================*/
 /**/
-/**/   //creación de vehículos (autos y motos)
-/**/   let peugeot208 = new Car('Peugeot', '208', '5', 250000.00);
-/**/   let hondaTitan = new Motorcycle('Honda', 'Titan', '125', 60000.00);
-/**/   let peugeot206 = new Car('Peugeot', '206', '5', 200000.00);
-/**/   let yamahaYBR = new Motorcycle('Yamaha', 'YBR', '160', 80500.50);
-/**/   let audiTT = new Car('Audi', 'TT', '3', 5000000.00);
-/**/
 /**/   //guardar los vehículos para calcular sus precios mas adelante - DB
 /**/   const storagedVehicles = [
-/**/       peugeot208,
-/**/       hondaTitan,
-/**/       peugeot206,
-/**/       yamahaYBR,
-/**/       audiTT,
+/**/       peugeot208 = new Car('Peugeot', '208', '5', 250000.00),
+/**/       hondaTitan = new Motorcycle('Honda', 'Titan', '125', 60000.00),
+/**/       peugeot206 = peugeot206 = new Car('Peugeot', '206', '5', 200000.00),
+/**/       yamahaYBR = new Motorcycle('Yamaha', 'YBR', '160', 80500.50),
+/**/       audiTT = new Car('Audi', 'TT', '3', 5000000.00),
 /**/   ];
 /**/
 /*=================================================================================*/
