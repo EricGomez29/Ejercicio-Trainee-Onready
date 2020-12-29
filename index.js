@@ -47,7 +47,7 @@ class Car {
 /**/
 /*=================================================================================*/
 
-//logs de los vehículos
+//logs de los vehículos (temporal, realizar una funcion adecuada)
 function printList() {
     console.log(peugeot208.car());
     console.log(hondaTitan.motorcycle());
@@ -69,10 +69,11 @@ function printMoreExpensive(arr) {
     var filtrado = arr.filter(e => {
         return e.price === max
     })
+    //Devuelvo el mensaje
     return console.log(`Vehículo más caro: ${filtrado[0].trademark} ${filtrado[0].model}`)
 }
 
-//Calcular el vehículo mas barato
+//Calcular el vehículo mas barato (no documento porque es lo mismo que la función 'printMoreExpensive'
 function printMoreCheap(arr) {
     var prices = []
     arr.map(e => {
@@ -88,20 +89,24 @@ function printMoreCheap(arr) {
 //Filtrar por query
 function filterQuery(query) {
     var models = [];
+    //guardo el nombre de los modelos en un array
     storagedVehicles.map(e => {
         models.push(e.model)
     })
+    //filtro los modelos que coincidan con la query recibida por parametros
     var queryFiltered = storagedVehicles.filter(e => {
         return e.model.toLowerCase().indexOf(query.toLowerCase()) > -1;
     })
     var names;
     for (let i = 0; i < queryFiltered.length; i++) {
+        //si 'i' es mayor que 0 significa que matchearon varios modelos, por lo que concateno en la variable names otro modelo con su marca y precio
         if(i > 0) {
             names +=` // ${queryFiltered[i].trademark} ${queryFiltered[i].model} $${convertCurrency(queryFiltered[i].price)}`;
         } else {
             names = `${queryFiltered[i].trademark} ${queryFiltered[i].model} $${convertCurrency(queryFiltered[i].price)}`;
         }       
     }
+    //devuelvo el mensaje final con la variable 'names' completa
     return console.log(`Vehículo/s que contiene/n en el modelo la/s letra/s ‘${query}’: ${names}`);
 }
 
